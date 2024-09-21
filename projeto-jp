@@ -41,6 +41,12 @@
             0% { background-color: red; }
             100% { background-color: white; }
         }
+.custom-image {
+    width: 100%; /* Largura total do contêiner */
+    max-width: 800px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px; /* Espaçamento do topo */
+}
         
         .photo-container {
     display: flex;
