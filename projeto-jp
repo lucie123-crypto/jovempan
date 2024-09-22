@@ -41,7 +41,7 @@
             0% { background-color: red; }
             100% { background-color: white; }
         }
-.custom-image {
+        .custom-image {
     width: 100%; /* Largura total do contêiner */
     max-width: 800px; /* Largura máxima da imagem */
     height: auto; /* Mantém a proporção da imagem */
@@ -58,6 +58,50 @@
 .photo-image {
     width: 380px; /* Ajuste a largura das imagens para ficarem menores */
     height: auto; /* Mantém a proporção da imagem */
+}
+.card {
+            margin-bottom: 15px; /* Espaçamento entre os cards */
+            max-width: 350px; /* Largura máxima dos cards */
+        }
+        .description {
+            display: flex;
+            flex-direction: column; /* Imagem em cima do texto */
+        }
+        .description-text {
+            margin-top: 10px; /* Espaço entre imagem e texto */
+        }
+        .img-left {
+            margin-right: 10px; /* Espaço entre imagem e texto à esquerda */
+        }
+        @media (min-width: 768px) {
+            .description {
+                flex-direction: row; /* Imagem ao lado do texto em telas maiores */
+            }
+            .description-text {
+                margin-top: 0; /* Remove o espaço entre imagem e texto em telas maiores */
+            }
+        }
+        .description img {
+    margin-right: 30px; /* Aumenta o espaço à direita da imagem */
+}
+.card-img-top {
+    width: auto; /* Mantém a largura automática */
+    height: 200px; /* Define uma altura fixa (ajuste conforme necessário) */
+    object-fit: cover; /* Corta a imagem se necessário, mantendo a proporção */
+}
+
+.description {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+.card {
+    width: 100%; /* Certifica-se de que o card ocupe toda a largura da coluna */
+}
+
+.d-flex img {
+    max-width: 400px; /* Limita a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
 }
 
     </style>
@@ -90,7 +134,9 @@
 
     <div class="top-bar py-2">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <a href="#" class="btn btn-danger">JP NEWS</a>
+            <a href="URL_DO_SEU_DESTINO" class="btn">
+                <img src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png" alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
+            </a>
             <a href="#" class="btn btn-danger">POLÍTICA</a>
             <a href="#" class="btn btn-danger">BRASIL</a>
             <a href="#" class="btn btn-danger">ECONOMIA</a>
@@ -145,14 +191,17 @@
         </div>
     </div>
 
-    <div class="container text-center mt-4">
-        <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" class="custom-image mx-auto d-block">
+    <div class="container text-center mt-4"></div>
+        <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
+             style="width: 800px; height: auto; border: 5px solid rgb(10, 10, 10); border-radius: 8px;" 
+             class="mx-auto d-block">
     </div>
 
 
     
     <div class="container text-left mt-4">
-        <h2 style="color: red; margin: 0;">JP NEWS</h2>
+        <h2 style="color: red; margin: 0;">JP NEWS <div class="pulsar"></div></h2>
+        
     </div>
 
     <div class="container d-flex align-items-start mt-4">
@@ -164,7 +213,104 @@
             <img src="https://i.ytimg.com/vi/MDyd0iUAx3E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBtXM6vfYMIGpD3-_aHAE1tvztf7A" alt="Imagem 2" class="photo-image">
         </div>
     </div>
+    <div class="container text-center mt-4">
+        <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
+             style="width: 700px; height: auto; border: 5px solid rgb(15, 15, 15); border-radius: 8px;" 
+             class="mx-auto d-block">
+    </div>
     
+    
+    <div class="container d-flex align-items-start mt-4">
+        <div class="video-container me-4">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/bnlECx-6HGE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="photo-container">
+            <img src="https://jpimg.com.br/uploads/2024/08/fast-news-24-08-2024-300x170.jpg" alt="Imagem 1" class="photo-image">
+            <img src="https://jpimg.com.br/uploads/2023/05/jornal-jovem-pan-05-05-2023-1024x576.jpg" alt="Imagem 2" class="photo-image">
+        </div>
+    </div>
+    
+    <div class="container mt-4">
+        <h2 class="text-center"></h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://jpimg.com.br/uploads/2024/09/pablo-marcal-960x576.png" class="card-img-top" alt="Notícia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Marçal manda recado a Boulos: ‘Você não senta na cadeira de prefeito em São Paulo’</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://jpimg.com.br/uploads/2024/09/whatsapp-image-2024-09-13-at-20.22.03-864x576.jpeg" class="card-img-top" alt="Notícia 2">
+                    <div class="card-body">Mauro Beting retorna à Jovem Pan NewsTítulo da Notícia 2</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-danger">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://jpimg.com.br/uploads/2024/09/jpconecta-960x576.png" class="card-img-top" alt="Notícia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Segunda edição do JP Conecta terá discussão sobre tecnologia e segurança em cidades inteligentes</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h2 class="text-center"></h2>
+<div class="row">
+    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+        <div class="d-flex align-items-center">
+            <img src="https://jpimg.com.br/uploads/2024/08/silvio-santos-jovem-pan-960x576.jpg" class="me-3 img-fluid" alt="Notícia 4"> <!-- Adicionada a classe img-fluid -->
+            <div>
+                <h5 class="card-title"></h5>
+                <p class="card-text">Silvio Santos era um fã declarado da Jovem Pan e ouvia a rádio todas as manhãs</p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+        <div class="d-flex align-items-center">
+            <img src="https://jpimg.com.br/uploads/2023/09/design-sem-nome-1-9-300x170.png" class="me-3" alt="Notícia 5"> <!-- Aumentado -->
+            <div>
+                <h5 class="card-title">Inauguração de estúdio da Jovem Pan em São José do Rio Preto reúne empresários e autoridades políticas</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+        <div class="d-flex align-items-center">
+            <img src="https://img.youtube.com/vi/A4YZDGhSD5I/maxresdefault.jpg" class="me-3" alt="Notícia 6"> <!-- Aumentado -->
+            <div>
+                <h5 class="card-title">O que esperar das eleições nos EUA?</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+        <div class="d-flex align-items-center">
+            <img src="https://jpimg.com.br/uploads/2024/09/morto-750x400.jpg" class="me-3" alt="Notícia 7"> <!-- Aumentado -->
+            <div>
+                <h5 class="card-title">Laudo mostra que homem morto pelo cunhado em São Paulo levou 11 facadas</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Leia mais</a>
+            </div>
+        </div>
+    </div>
+</div>
+
     
 
     
