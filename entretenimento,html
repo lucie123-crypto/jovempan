@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="https://logospng.org/download/jovem-pan/jovem-pan-256.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>JP News | Jovem Pan </title>
+</head>
+<style>
+    @media (min-width: 992px) {
+    .btn-custom {
+        font-size: 1.2rem; /* Aumenta o tamanho dos botões no desktop */
+    }
+}
+
+@media (max-width: 991px) {
+    .btn-custom {
+        font-size: 0.9rem; /* Diminui o tamanho dos botões em celulares */
+    }
+}
+        .custom-card {
+    width: 100%; /* Para ocupar toda a largura da coluna */
+    max-width: 700px; /* Largura máxima desejada */
+    margin: auto; /* Centraliza o card */
+}
+        .responsive-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.video-container {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    max-width: 800px; /* Limite de largura do vídeo */
+    margin-bottom: 20px; /* Espaçamento inferior em telas pequenas */
+}
+
+.video-container iframe {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
+}
+
+.photo-container {
+    display: flex; /* Permite que as imagens fiquem lado a lado */
+    flex-direction: column; /* As imagens ficam em coluna por padrão */
+    justify-content: flex-start; /* Alinha ao topo */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+/* Media Query para telas maiores */
+@media (min-width: 768px) {
+    .video-container {
+        margin-bottom: 0; /* Remove o espaçamento inferior em telas grandes */
+    }
+
+    .photo-container {
+        flex-direction: row; /* Alinha as imagens lado a lado em telas maiores */
+    }
+
+    .photo-image {
+        flex: 1; /* As imagens ocupam espaço igual */
+        min-width: 200px; /* Largura mínima para as imagens */
+        max-width: 100%; /* Garante que não ultrapassem a largura do contêiner */
+    }
+}
+
+        body {
+            background-color: #ffffff;
+            color: #181717;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background-color: #080808;
+            color: #070707;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f10101;
+            text-decoration: underline;
+        }
+        .pulsar {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: pulsate 1s infinite alternate;
+        }
+        @keyframes pulsate {
+            0% { background-color: red; }
+            100% { background-color: white; }
+        }
+        .custom-image {
+    width: 100%; /* Largura total do contêiner */
+    max-width: 800px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px; /* Espaçamento do topo */
+}
+        
+        .photo-container {
+    display: flex;
+    flex-direction: column; /* Coloca as fotos uma em cima da outra */
+    gap: 10px; /* Espaçamento entre as fotos */
+    margin-left: 20px; /* Espaçamento à esquerda das imagens */
+}
+
+.photo-image {
+    width: 380px; /* Ajuste a largura das imagens para ficarem menores */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.card {
+            margin-bottom: 15px; /* Espaçamento entre os cards */
+            max-width: 350px; /* Largura máxima dos cards */
+        }
+        .description {
+            display: flex;
+            flex-direction: column; /* Imagem em cima do texto */
+        }
+        .description-text {
+            margin-top: 10px; /* Espaço entre imagem e texto */
+        }
+        .img-left {
+            margin-right: 10px; /* Espaço entre imagem e texto à esquerda */
+        }
+        @media (min-width: 768px) {
+            .description {
+                flex-direction: row; /* Imagem ao lado do texto em telas maiores */
+            }
+            .description-text {
+                margin-top: 0; /* Remove o espaço entre imagem e texto em telas maiores */
+            }
+        }
+        .description img {
+    margin-right: 30px; /* Aumenta o espaço à direita da imagem */
+}
+.card-img-top {
+    width: auto; /* Mantém a largura automática */
+    height: 200px; /* Define uma altura fixa (ajuste conforme necessário) */
+    object-fit: cover; /* Corta a imagem se necessário, mantendo a proporção */
+}
+
+.description {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+.card {
+    width: 100%; /* Certifica-se de que o card ocupe toda a largura da coluna */
+}
+
+.d-flex img {
+    max-width: 400px; /* Limita a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}.sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Escondida inicialmente */
+            width: 250px;
+            height: 100%;
+            background-color: #343a40;
+            color: white;
+            transition: left 0.3s;
+            padding-top: 20px;
+        }
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000; /* Fica acima de outros elementos */
+        }
+        /* Mostrar a sidebar ao passar o mouse sobre o botão */
+        .menu-toggle:hover + .sidebar {
+            left: 0; /* Exibe a sidebar */
+        }
+        .sidebar a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #ffffff;
+        }
+        .card {
+            margin: 15px; /* Espaçamento entre os cards */
+            width: 300px; /* Largura fixa para os cards */
+        }
+        .card-text {
+            text-align: right; /* Alinha o texto à direita */
+        }
+        .card-container {
+            margin-left: -10%; /* Ajusta a posição dos cards para a direita */
+        }
+        .side-image {
+            max-width: 300px; /* Limita a largura da imagem lateral */
+            margin-left: 100px; /* Espaço entre os cards e a imagem */
+        }
+        .btn-custom {
+    background-color: rgb(7, 7, 7); /* Fundo branco */
+    color: rgb(255, 245, 245); /* Texto preto */
+    border: 1px solid #000000; /* Borda opcional */
+}
+
+.btn-custom:hover {
+    background-color: #faf8f8; /* Efeito ao passar o mouse */
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo"
+                    class="d-inline-block align-top" style="width: 50px; height: 50px; margin-right: 10px;">
+                <h5 style="color: red; margin: 0;">JP NEWS</h5>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <h7 style="color: rgb(255, 255, 255); margin: 0;">Mude A Cidade</h7>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <h7 style="color: rgb(255, 255, 255); margin: 0;">Ouça Ao Vivo</h7>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                </form>
+                <a href="#" class="btn btn-danger">Entra Na Conta</a>
+                <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png"
+                    alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
+            </div>
+        </div>
+    </nav>
+
+    <div class="top-bar py-2">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
+            <a href="inicio_jp.html" class="btn">
+                <img href="inicio_jp.html"
+                    src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png"
+                    alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
+            </a>
+            <a href="politica.html" class="btn btn-custom">Política</a>
+<a href="Brasil.html" class="btn btn-custom">Brasil</a>
+<a href="economia.html" class="btn btn-custom">Economia</a>
+<a href="mundo.html" class="btn btn-custom">Mundo</a>
+<a href="site_esporte.html" class="btn btn-custom">Esporte</a>
+<a href="site_saude.html" class="btn btn-custom">Saúde</a>
+<a href="entreterimento.html" class="btn btn-custom">Entretenimento</a>
+<a href="contato.html" class="btn btn-custom">Contato</a>
+    </div>
+</div>
+<div class="container text-center mt-4">
+    <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
+         class="responsive-image mx-auto d-block" 
+         style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
+</div>
+
+
+    </div>
+    <div class="container text-left mt-4">
+        <h2 style="color: rgb(116, 110, 110); margin: 0;">
+            Entretenimento</h2>
+        <h6> Descubra as últimas novidades do entretenimento e mergulhe em um universo de cultura, música e cinema que
+            transforma o cotidiano em momentos de pura diversão!</h6>
+    </div>
+    <div class="container d-flex align-items-start mt-4">
+        <div class="video-container me-4">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/ORJHOn2kmKo" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+        <div class="photo-container">
+            <div class="image-container">
+                <img src="https://jpimg.com.br/uploads/2024/09/2564c25faf9008139cf1f5b427ca7c7fb03f3e08-675x450.jpg"
+                    alt="Imagem 1" class="photo-image">
+                <div class="overlay-text">Zac Efron revela tratamento com células-tronco após lesões em filmagem</div>
+            </div>
+            <div class="image-container">
+                <img src="https://jpimg.com.br/uploads/2024/09/max-750x398.jpg" alt="Imagem 1" class="photo-image">
+                <div class="overlay-text">‘Pinguim’ tem a maior estreia de série inédita na Max desde ‘The Last of Us’
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-center mt-4">
+        <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem"
+            style="width: 700px; height: auto; border: 5px solid rgb(15, 15, 15); border-radius: 8px;"
+            class="mx-auto d-block">
+    </div>
+
+
+
+
+    <div class="container mt-4">
+        <h2 class="text-center"></h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://jpimg.com.br/uploads/2022/11/063_1423458205-1-1-651x450.jpg" class="card-img-top"
+                        alt="Notícia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Zac Efron revela tratamento com células-tronco após lesões em filmagem
+                        </h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://jpimg.com.br/uploads/2024/03/shawn-mendes-750x450.jpg" class="card-img-top"
+                        alt="Notícia 2">
+                    <div class="card-body">Shawn Mendes retorna ao Rock in Rio com show emocionante e novo álbum a
+                        caminho</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://jpimg.com.br/uploads/2024/09/thunders-750x419.png" class="card-img-top"
+                        alt="Notícia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">‘Thunderbolts’ ganha trailer inédito; assista</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center"></h2>
+        <div class="row">
+            <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+                <div class="d-flex align-items-center">
+                    <img src="https://jpimg.com.br/uploads/2024/09/kim-kardashian-750x450.jpg" class="me-3 img-fluid"
+                        alt="Notícia 4"> <!-- Adidatacionada a classe img-fluid -->
+                    <div>
+                        <h5 class="card-title">Kim Kardashian posta fotos com os filhos e altura de North West
+                            surpreende
+                        </h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+                <div class="d-flex align-items-center">
+                    <img src="https://jpimg.com.br/uploads/2024/09/katy-perry-750x450.jpg" class="me-3" alt="Notícia 5">
+                    <!-- Aumentado -->
+                    <div>
+                        <h5 class="card-title">
+
+                            Katy Perry encanta fãs brasileiros com performance e homenagens
+                        </h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+                <div class="d-flex align-items-center">
+                    <img src="https://jpimg.com.br/uploads/2024/07/000_34wu2mz-676x450.jpg" class="me-3"
+                        alt="Notícia 6"> <!-- Aumentado -->
+                    <div>
+                        <h5 class="card-title">Kate Middleton retorna ao trabalho após quimioterapia e foca em projeto
+                            infantil
+                        </h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
+                <div class="d-flex align-items-center">
+                    <img src="https://jpimg.com.br/uploads/2022/03/design-sem-nome-56.jpg" class="me-3" alt="Notícia 7">
+                    <!-- Aumentado -->
+                    <div>
+                        <h5 class="card-title">Batman será o primeiro super-herói a ter estrela na Calçada da Fama</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 100px;"> <!-- Ajuste para não sobrepor a navbar -->
+            <div class="d-flex justify-content-start align-items-start"> <!-- Flexbox para alinhar cards e imagem -->
+                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/caua-609x450.png" class="card-img-top"
+                            alt="Imagem do Card 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Madonna posta foto com Cauã Reymond no Instagram durante Semana de
+                                Moda de Milão
+                            </h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/soltera-shakira-anitta-750x450.jpg"
+                            class="card-img-top" alt="Imagem do Card 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Shakira anuncia data de lançamento de ‘Soltera’ com foto em noitada
+                                ao lado de Anitta ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2022/12/267044019_590661388680785_7777969672630690178_n-1-750x450.jpg"
+                            class="card-img-top" alt="Imagem do Card 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Silvia Abravanel volta à TV após morte de Silvio Santos e faz
+                                homenagem ao paiㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-start align-items-start">
+                <!-- Segunda linha de cards sem margem superior -->
+                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/design-sem-nome-31-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Fabiana Justus celebra sucesso em tratamento contra leucemia</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/06/design-sem-nome-22-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Show de Ne-Yo em São Paulo traz nostalgia dos anos 2000</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/08/design-sem-nome-98-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Mãe de suposta filha de Neymar desabafa sobre paternidade</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start">
+                <!-- Segunda linha de cards sem margem superior -->
+                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/design-sem-nome-2-6-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 4">
+                        <div class="card-body">
+                            <h5 class="card-title">No Rock in Rio, Naldo reencontra Will Smith após 11 anos</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/07/jovem_pan_round_6_a_segunda_temporada_tem_data_de_estreia_revelada_e_novidades_de_hwang_dong_hyuk-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 5">
+                        <div class="card-body">
+                            <h5 class="card-title">‘Round 6’: Netflix divulga primeiro trailer da segunda temporada
+                            </h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/design-sem-nome-3-6-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Xuxa se apresenta no Rock in Rio após show de Katy Perry</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start">
+                <!-- Segunda linha de cards sem margem superior -->
+                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/design-sem-nome-5-4-750x450.png"
+                            class="card-img-top" alt="Imagem do Card 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rodrigão, ex-BBB, se recupera de cirurgia após remoção de tumor
+                                benigno
+                            </h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2018/10/black-mirror-logo.jpg" class="card-img-top"
+                            alt="Imagem do Card 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Netflix anuncia lançamento da sétima temporada de ‘Black Mirror’ para
+                                2025l</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/betinho-739x450.png" class="card-img-top"
+                            alt="Imagem do Card 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Julio Andrade é indicado ao Emmy Internacional por ‘Betinho: no fio
+                                da navalha’</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start">
+                <!-- Segunda linha de cards sem margem superior -->
+                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/snapinsta.app_460209203_18459401179025472_8882028567868615716_n_1080-676x450.jpg"
+                            class="card-img-top" alt="Imagem do Card 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Ana Hickmann e Edu Guedes anunciam noivado em celebração
+                                íntimaㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2019/02/ed-sheeran.jpg" class="card-img-top"
+                            alt="Imagem do Card 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Kate Middleton anuncia que terminou quimioterapia: ‘Meu caminho para
+                                a cura e para a total recuperação é longo’</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="red-bar"></div> <!-- Barra vermelha -->
+                        <img src="https://jpimg.com.br/uploads/2024/09/snapinsta.app_457148491_18050336260859639_1389487567104668013_n_1080-660x450.jpg"
+                            class="card-img-top" alt="Imagem do Card 6">
+                        <div class="card-body">
+                            <h5 class="card-title">‘Friends’ ganha exposição interativa em São Paulo para celebrar seus
+                                30 anosㅤㅤㅤㅤ</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-dark">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<footer style="background-color: #f8f9fa; padding: 20px 0;"></footer>
+<div style="background-color: #e0e0e0; padding: 30px 0;"> <!-- Barra superior -->
+    <h5 style="text-align: center; color: #333;">Jovem Pan</h5>
+</div>
+<div style="background-color: #d0d0d0; padding: 30px 0;"> <!-- Barra inferior -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">POLÍTICA</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">BRASIL</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">ECONOMIA</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">MUNDO</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">ESPORTES</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">SAÚDE</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">ENTRETENIMENTO</a></div>
+            <div class="col"><a href="#" style="color: #333; text-decoration: none;">CONTATO</a></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+
+</html>
