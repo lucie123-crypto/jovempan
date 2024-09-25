@@ -10,8 +10,65 @@
     <title>JP News | Jovem Pan </title>
 </head>
 <style>
+        @media (min-width: 992px) {
+    .btn-custom {
+        font-size: 1.2rem; /* Aumenta o tamanho dos botões no desktop */
+    }
+}
+
+@media (max-width: 991px) {
+    .btn-custom {
+        font-size: 0.9rem; /* Diminui o tamanho dos botões em celulares */
+    }
+}
+        .custom-card {
+    width: 100%; /* Para ocupar toda a largura da coluna */
+    max-width: 700px; /* Largura máxima desejada */
+    margin: auto; /* Centraliza o card */
+}
+        .responsive-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.video-container {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    max-width: 800px; /* Limite de largura do vídeo */
+    margin-bottom: 20px; /* Espaçamento inferior em telas pequenas */
+}
+
+.video-container iframe {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
+}
+
+.photo-container {
+    display: flex; /* Permite que as imagens fiquem lado a lado */
+    flex-direction: column; /* As imagens ficam em coluna por padrão */
+    justify-content: flex-start; /* Alinha ao topo */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+/* Media Query para telas maiores */
+@media (min-width: 768px) {
+    .video-container {
+        margin-bottom: 0; /* Remove o espaçamento inferior em telas grandes */
+    }
+
+    .photo-container {
+        flex-direction: row; /* Alinha as imagens lado a lado em telas maiores */
+    }
+
+    .photo-image {
+        flex: 1; /* As imagens ocupam espaço igual */
+        min-width: 200px; /* Largura mínima para as imagens */
+        max-width: 100%; /* Garante que não ultrapassem a largura do contêiner */
+    }
+}
+
         body {
-            background-color: #ffffff; 
+            background-color: #ffffff;
             color: #181717;
             font-family: Arial, sans-serif;
         }
@@ -128,13 +185,13 @@
             left: 0; /* Exibe a sidebar */
         }
         .sidebar a {
-            color: white;
+            color: rgb(0, 0, 0);
             text-decoration: none;
             display: block;
             padding: 10px;
         }
         .sidebar a:hover {
-            background-color: #495057;
+            background-color: #ffffff;
         }
         .card {
             margin: 15px; /* Espaçamento entre os cards */
@@ -150,39 +207,14 @@
             max-width: 300px; /* Limita a largura da imagem lateral */
             margin-left: 100px; /* Espaço entre os cards e a imagem */
         }
-        .red-bar {
-            position: absolute; /* Posiciona a barra em relação ao card */
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 10px; /* Altura da barra */
-            background-color: red; /* Cor da barra */
-        }
         .btn-custom {
-    background-color: rgb(2, 2, 2); /* Fundo branco */
-    color: rgb(248, 248, 248); /* Texto preto */
-    border: 1px solid #ccc; /* Borda opcional */
+    background-color: rgb(7, 7, 7); /* Fundo branco */
+    color: rgb(255, 245, 245); /* Texto preto */
+    border: 1px solid #000000; /* Borda opcional */
 }
 
 .btn-custom:hover {
-    background-color: #ffffff; /* Efeito ao passar o mouse */
-}
-.image-container {
-    position: relative;
-    display: inline-block; /* Para ajustar o tamanho da div ao tamanho da imagem */
-}
-
-.photo-image {
-    display: block; /* Remove espaços em branco embaixo da imagem */
-}
-
-.overlay-text {
-    position: absolute;
-    bottom: 10px; /* Distância do fundo */
-    left: 10px; /* Distância da esquerda */
-    color: white; /* Cor do texto */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    padding: 5px; /* Espaçamento interno */
+    background-color: #faf8f8; /* Efeito ao passar o mouse */
 }
 
     </style>
@@ -218,27 +250,25 @@
             <img  href="inicio_jp.html" src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png" alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
         </a>
         <a href="politica.html" class="btn btn-custom">Política</a>
-<a href="#" class="btn btn-custom">Brasil</a>
-<a href="#" class="btn btn-custom">Economia</a>
-<a href="#" class="btn btn-custom">Mundo</a>
-<a href="#" class="btn btn-custom">Esporte</a>
-<a href="#" class="btn btn-custom">Saúde</a>
-<a href="#" class="btn btn-custom">Entretenimento</a>
+<a href="Brasil.html" class="btn btn-custom">Brasil</a>
+<a href="economia.html" class="btn btn-custom">Economia</a>
+<a href="mundo.html" class="btn btn-custom">Mundo</a>
+<a href="site_esporte.html" class="btn btn-custom">Esporte</a>
+<a href="site_saude.html" class="btn btn-custom">Saúde</a>
+<a href="entreterimento.html" class="btn btn-custom">Entretenimento</a>
 <a href="contato.html" class="btn btn-custom">Contato</a>
     </div>
-    <a class="navbar-brand d-flex align-items-center" href="#">
-        <i" alt="JP NEWS Logo" class="d-inline-block align-top" style="width: 50px; height: 50px; margin-right: 10px;">
-        <h5 style="color: red; margin: 0;">JP NEWS</h5>
-    </a>
-    
-    
-    
+</div>
+<div class="container text-center mt-4">
+    <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
+         class="responsive-image mx-auto d-block" 
+         style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
 </div>
 <div class="container text-left mt-4">
     <h2 style="color: rgb(116, 110, 110); margin: 0;">Política  </h2>
     <h6> As últimas informações sobre a política no Brasil. Veja o que acontece de importante no Planalto, Congresso, Judiciário, além de notícias dos bastidores.</h6>
 </div>
-<div class="container d-flex align-items-start mt-4">
+<div class="container d-flex flex-column flex-md-row align-items-start mt-4">
     <div class="video-container me-4">
         <iframe width="800" height="450" src="https://www.youtube.com/embed/UdyWbNZwDaA" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -259,8 +289,8 @@
 </div>
 <div class="container text-center mt-4">
     <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
-         style="width: 700px; height: auto; border: 5px solid rgb(15, 15, 15); border-radius: 8px;" 
-         class="mx-auto d-block">
+         class="responsive-image mx-auto d-block" 
+         style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
 </div>
 
 
