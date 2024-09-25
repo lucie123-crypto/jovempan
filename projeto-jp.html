@@ -4,11 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="https://logospng.org/download/jovem-pan/jovem-pan-256.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>JP News | Jovem Pan </title>
     <style>
+        @media (min-width: 992px) {
+    .btn-custom {
+        font-size: 1.2rem; /* Aumenta o tamanho dos botões no desktop */
+    }
+}
+
+@media (max-width: 991px) {
+    .btn-custom {
+        font-size: 0.9rem; /* Diminui o tamanho dos botões em celulares */
+    }
+}
+        .custom-card {
+    width: 100%; /* Para ocupar toda a largura da coluna */
+    max-width: 700px; /* Largura máxima desejada */
+    margin: auto; /* Centraliza o card */
+}
+        .responsive-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.video-container {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    max-width: 800px; /* Limite de largura do vídeo */
+    margin-bottom: 20px; /* Espaçamento inferior em telas pequenas */
+}
+
+.video-container iframe {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
+}
+
+.photo-container {
+    display: flex; /* Permite que as imagens fiquem lado a lado */
+    flex-direction: column; /* As imagens ficam em coluna por padrão */
+    justify-content: flex-start; /* Alinha ao topo */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+/* Media Query para telas maiores */
+@media (min-width: 768px) {
+    .video-container {
+        margin-bottom: 0; /* Remove o espaçamento inferior em telas grandes */
+    }
+
+    .photo-container {
+        flex-direction: row; /* Alinha as imagens lado a lado em telas maiores */
+    }
+
+    .photo-image {
+        flex: 1; /* As imagens ocupam espaço igual */
+        min-width: 200px; /* Largura mínima para as imagens */
+        max-width: 100%; /* Garante que não ultrapassem a largura do contêiner */
+    }
+}
+
         body {
             background-color: #ffffff;
             color: #181717;
@@ -127,13 +185,13 @@
             left: 0; /* Exibe a sidebar */
         }
         .sidebar a {
-            color: white;
+            color: rgb(0, 0, 0);
             text-decoration: none;
             display: block;
             padding: 10px;
         }
         .sidebar a:hover {
-            background-color: #495057;
+            background-color: #ffffff;
         }
         .card {
             margin: 15px; /* Espaçamento entre os cards */
@@ -149,23 +207,16 @@
             max-width: 300px; /* Limita a largura da imagem lateral */
             margin-left: 100px; /* Espaço entre os cards e a imagem */
         }
-        .red-bar {
-            position: absolute; /* Posiciona a barra em relação ao card */
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 10px; /* Altura da barra */
-            background-color: red; /* Cor da barra */
-        }
         .btn-custom {
-    background-color: rgb(2, 2, 2); /* Fundo branco */
-    color: rgb(248, 248, 248); /* Texto preto */
-    border: 1px solid #ccc; /* Borda opcional */
+    background-color: rgb(7, 7, 7); /* Fundo branco */
+    color: rgb(255, 245, 245); /* Texto preto */
+    border: 1px solid #000000; /* Borda opcional */
 }
 
 .btn-custom:hover {
-    background-color: #f5ebeb; /* Efeito ao passar o mouse */
+    background-color: #faf8f8; /* Efeito ao passar o mouse */
 }
+
 
     </style>
 </head>
@@ -186,36 +237,36 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow"> <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo" class="d-inline-block align-top" style="width: 50px; height: 50px; margin-right: 10px;">
-                <h5 style="color: red; margin: 0;">JP NEWS</h5>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><h7 style="color: rgb(255, 255, 255); margin: 0;">Mude A Cidade</h7></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><h7 style="color: rgb(255, 255, 255); margin: 0;">Ouça Ao Vivo</h7></a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Pesquisar</button>
-                </form>
-                <a href="#" class="btn btn-danger">Entra Na Conta</a>
-                <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png" alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
-            </div>
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo" class="d-inline-block align-top" style="width: 50px; height: 50px; margin-right: 10px;">
+            <h5 style="color: red; margin: 0;">JP NEWS</h5>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h7 style="color: rgb(255, 255, 255); margin: 0;">Mude A Cidade</h7></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><h7 style="color: rgb(255, 255, 255); margin: 0;">Ouça Ao Vivo</h7></a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+            </form>
+            <a href="#" class="btn btn-danger">Entra Na Conta</a>
+            <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png" alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="top-bar py-2"> 
-        <div class="btn-group" role="group" aria-label="Basic example"> <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
-            <a href="inicio_jp.html" class="btn">
-                <img src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png" alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
-            </a>
-            <a href="politica.html" class="btn btn-custom">Política</a>
+<div class="top-bar py-2"> 
+    <div class="btn-group" role="group" aria-label="Basic example"> <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
+        <a href="inicio_jp.html" class="btn">
+            <img src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png" alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
+        </a>
+        <a href="politica.html" class="btn btn-custom">Política</a>
 <a href="" class="btn btn-custom">Brasil</a>
 <a href="#" class="btn btn-custom">Economia</a>
 <a href="#" class="btn btn-custom">Mundo</a>
@@ -223,84 +274,81 @@
 <a href="#" class="btn btn-custom">Saúde</a>
 <a href="#" class="btn btn-custom">Entretenimento</a>
 <a href="contato.html" class="btn btn-custom">Contato</a>
-        </div>
-        <div class="container">
-            <div class="d-flex align-items-center">
-                <span class="text-light">JP NEWS</span>
-                <div class="pulsar"></div>
-                <marquee behavior="scroll" direction="left" scrollamount="15" class="text-light ms-3">
-                    • Julgamento de recurso do acidente do voo Rio-Paris de 2009 será realizado na França em 2025
-                    • Rock in Rio 2024: confira programação desta sexta com line-up e horário dos shows
-                    • Bombeiros de Mato Grosso monitoram incêndios em 17 propriedades rurais
-                    • Consultoria afirma que Elon Musk será trilionário em 2027
-                    • Netanyahu reduz viagem aos EUA em meio a conflito com Hezbollah
-                    • TRE derruba propaganda de campanha de Ramagem que associava Paes ao assassinato de Marielle
-                    • Meta anuncia suspensão de anúncios políticos durante eleição após pedido do TSE
-                    • Israel lança maior bombardeio contra o Líbano desde início da guerra e mata comandante da força de elite do Hezbollah
-                    • Governo federal projeta mudanças no crédito consignado e saque-aniversário do FGTS
-                    • Detran-SP reforça ações na Semana Nacional de Trânsito
-                    • Banco Central comunica vazamento de 150 cadastros da Shopee
-                    • Pesquisas pós-debate mostram empate entre Kamala e Trump
-                    • Rio de Janeiro, São Paulo, Salvador e Curitiba serão afetadas pela migração climática, diz estudo
-                    • Paraná Pesquisas: Ricardo Nunes (MDB) lidera corrida para Prefeitura de SP com 26,8% de intenções de voto
-                    • Brasil registra baixa cobertura vacinal contra a dengue com 48,88% de doses aplicadas
-                    • Relatório da ONU e de ONGs denuncia tortura sistemática sob regime de Nicolás Maduro na Venezuela
-                    • Irã promete resposta esmagadora a Israel após ataques ao Líbano
-                    • Maduro critica opositor que buscou asilo na Espanha após derrota eleitoral
-                    • Polícia Civil identifica responsáveis por disparos que feriram adolescente em tiroteio no Complexo da Maré
-                    • Endrick é comparado a Ferenc Puskas após estreia na Liga dos Campeões
-                    • Mega-Sena acumula e prêmio chega a R$ 6 milhões
-                    • Flamengo é derrotado pelo Peñarol e volta a perder em casa na Libertadores após cinco anos
-                    • Rede social X acata ordem judicial e volta a ficar indisponível no Brasil
-                    • Hezbollah diz que Israel cruzou ‘linha vermelha’ e que ataques com pagers representam uma declaração de guerra
-                    • Governo Federal avança em projeto da ferrovia Transnordestina com investimento de R$ 15,2 milhões
-                    • Lula apresenta nova ministra dos Direitos Humanos em evento com Anielle Franco
-                    • Senacon investiga pré-instalação de aplicativos de apostas em celulares
-                    • Carregador portátil, capas de chuva e comida: confira itens essenciais para levar para o Rock in Rio
-                    • Dólar cai a menor valor em um mês e fecha a R$ 5,42 com diferencial de juro entre Fed e Copom
-                    • Israel bombardeia centenas de sistemas de lançadores de foguetes no Líbano
-                    • Ministro da Saúde do Líbano diz que ataques ao Hezbollah com pagers são crimes de guerra
-                    • X defende acesso de usuários no STF após bloqueio no Brasil
-                    • Lateral brasileiro se destaca e ajuda o Monaco a vencer o Barcelona em estreia na Liga dos Campeões
-                    • Rui Costa destaca colaboração de Estados para combater incêndios no Brasil
-                    • Brasil brilha no Mundial de Skate Park em Roma e 13 atletas garantem vaga nas quartas de final
-                </marquee>
-            </div>
+    </div>
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <span class="text-light">JP NEWS</span>
+            <div class="pulsar"></div>
+            <marquee behavior="scroll" direction="left" scrollamount="15" class="text-light ms-3">
+                • Julgamento de recurso do acidente do voo Rio-Paris de 2009 será realizado na França em 2025
+                • Rock in Rio 2024: confira programação desta sexta com line-up e horário dos shows
+                • Bombeiros de Mato Grosso monitoram incêndios em 17 propriedades rurais
+                • Consultoria afirma que Elon Musk será trilionário em 2027
+                • Netanyahu reduz viagem aos EUA em meio a conflito com Hezbollah
+                • TRE derruba propaganda de campanha de Ramagem que associava Paes ao assassinato de Marielle
+                • Meta anuncia suspensão de anúncios políticos durante eleição após pedido do TSE
+                • Israel lança maior bombardeio contra o Líbano desde início da guerra e mata comandante da força de elite do Hezbollah
+                • Governo federal projeta mudanças no crédito consignado e saque-aniversário do FGTS
+                • Detran-SP reforça ações na Semana Nacional de Trânsito
+                • Banco Central comunica vazamento de 150 cadastros da Shopee
+                • Pesquisas pós-debate mostram empate entre Kamala e Trump
+                • Rio de Janeiro, São Paulo, Salvador e Curitiba serão afetadas pela migração climática, diz estudo
+                • Paraná Pesquisas: Ricardo Nunes (MDB) lidera corrida para Prefeitura de SP com 26,8% de intenções de voto
+                • Brasil registra baixa cobertura vacinal contra a dengue com 48,88% de doses aplicadas
+                • Relatório da ONU e de ONGs denuncia tortura sistemática sob regime de Nicolás Maduro na Venezuela
+                • Irã promete resposta esmagadora a Israel após ataques ao Líbano
+                • Maduro critica opositor que buscou asilo na Espanha após derrota eleitoral
+                • Polícia Civil identifica responsáveis por disparos que feriram adolescente em tiroteio no Complexo da Maré
+                • Endrick é comparado a Ferenc Puskas após estreia na Liga dos Campeões
+                • Mega-Sena acumula e prêmio chega a R$ 6 milhões
+                • Flamengo é derrotado pelo Peñarol e volta a perder em casa na Libertadores após cinco anos
+                • Rede social X acata ordem judicial e volta a ficar indisponível no Brasil
+                • Hezbollah diz que Israel cruzou ‘linha vermelha’ e que ataques com pagers representam uma declaração de guerra
+                • Governo Federal avança em projeto da ferrovia Transnordestina com investimento de R$ 15,2 milhões
+                • Lula apresenta nova ministra dos Direitos Humanos em evento com Anielle Franco
+                • Senacon investiga pré-instalação de aplicativos de apostas em celulares
+                • Carregador portátil, capas de chuva e comida: confira itens essenciais para levar para o Rock in Rio
+                • Dólar cai a menor valor em um mês e fecha a R$ 5,42 com diferencial de juro entre Fed e Copom
+                • Israel bombardeia centenas de sistemas de lançadores de foguetes no Líbano
+                • Ministro da Saúde do Líbano diz que ataques ao Hezbollah com pagers são crimes de guerra
+                • X defende acesso de usuários no STF após bloqueio no Brasil
+                • Lateral brasileiro se destaca e ajuda o Monaco a vencer o Barcelona em estreia na Liga dos Campeões
+                • Rui Costa destaca colaboração de Estados para combater incêndios no Brasil
+                • Brasil brilha no Mundial de Skate Park em Roma e 13 atletas garantem vaga nas quartas de final
+            </marquee>
         </div>
     </div>
+</div>
 
-    <div class="container text-center mt-4"></div>
+    <div class="container text-center mt-4">
         <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
-             style="width: 800px; height: auto; border: 5px solid rgb(10, 10, 10); border-radius: 8px;" 
-             class="mx-auto d-block">
+             class="responsive-image mx-auto d-block" 
+             style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
     </div>
-
-
     
     <div class="container text-left mt-4">
         <h2 style="color: red; margin: 0;">JP NEWS <div class="pulsar"></div></h2>
-        
     </div>
-
-    <div class="container d-flex align-items-start mt-4">
+    
+    <div class="container d-flex flex-column flex-md-row align-items-start mt-4">
         <div class="video-container me-4">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/JtfoKDu0s8w" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JtfoKDu0s8w" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="photo-container">
             <img src="https://s.jpimg.com.br/wp-content/themes/jovempan/assets/src/images/img_ao_vivo_player.jpg" alt="Imagem 1" class="photo-image">
             <img src="https://i.ytimg.com/vi/MDyd0iUAx3E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBtXM6vfYMIGpD3-_aHAE1tvztf7A" alt="Imagem 2" class="photo-image">
         </div>
     </div>
+    
     <div class="container text-center mt-4">
         <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
-             style="width: 700px; height: auto; border: 5px solid rgb(15, 15, 15); border-radius: 8px;" 
-             class="mx-auto d-block">
+             class="responsive-image mx-auto d-block" 
+             style="border: 5px solid rgb(15, 15, 15); border-radius: 8px;">
     </div>
     
-    
-    <div class="container d-flex align-items-start mt-4">
+    <div class="container d-flex flex-column flex-md-row align-items-start mt-4">
         <div class="video-container me-4">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/bnlECx-6HGE" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/bnlECx-6HGE" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="photo-container">
             <img src="https://jpimg.com.br/uploads/2024/08/fast-news-24-08-2024-300x170.jpg" alt="Imagem 1" class="photo-image">
@@ -308,82 +356,54 @@
         </div>
     </div>
     
-    <div class="container mt-4">
-        <h2 class="text-center"></h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://jpimg.com.br/uploads/2024/09/pablo-marcal-960x576.png" class="card-img-top" alt="Notícia 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Marçal manda recado a Boulos: ‘Você não senta na cadeira de prefeito em São Paulo’</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-dark">Leia mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://jpimg.com.br/uploads/2024/09/whatsapp-image-2024-09-13-at-20.22.03-864x576.jpeg" class="card-img-top" alt="Notícia 2">
-                    <div class="card-body">Mauro Beting retorna à Jovem Pan NewsTítulo da Notícia 2</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-danger">Leia mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://jpimg.com.br/uploads/2024/09/jpconecta-960x576.png" class="card-img-top" alt="Notícia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Segunda edição do JP Conecta terá discussão sobre tecnologia e segurança em cidades inteligentes</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-dark">Leia mais</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <h2 class="text-center"></h2>
-<div class="row">
-    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
-        <div class="d-flex align-items-center">
-            <img src="https://jpimg.com.br/uploads/2024/08/silvio-santos-jovem-pan-960x576.jpg" class="me-3 img-fluid" alt="Notícia 4"> <!-- Adicionada a classe img-fluid -->
-            <div>
-                <h5 class="card-title"></h5>
-                <p class="card-text">Silvio Santos era um fã declarado da Jovem Pan e ouvia a rádio todas as manhãs</p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
-        <div class="d-flex align-items-center">
-            <img src="https://jpimg.com.br/uploads/2023/09/design-sem-nome-1-9-300x170.png" class="me-3" alt="Notícia 5"> <!-- Aumentado -->
-            <div>
-                <h5 class="card-title">Inauguração de estúdio da Jovem Pan em São José do Rio Preto reúne empresários e autoridades políticas</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
-        <div class="d-flex align-items-center">
-            <img src="https://img.youtube.com/vi/A4YZDGhSD5I/maxresdefault.jpg" class="me-3" alt="Notícia 6"> <!-- Aumentado -->
-            <div>
-                <h5 class="card-title">O que esperar das eleições nos EUA?</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
+    <h2 class="text-center mb-4">Notícias</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-4"> <!-- Primeiro Card -->
+            <div class="card custom-card">
+                <img src="https://jpimg.com.br/uploads/2024/08/silvio-santos-jovem-pan-960x576.jpg" class="card-img-top img-fluid" alt="Notícia 4">
+                <div class="card-body">
+                    <h5 class="card-title">Silvio Santos era um fã declarado da Jovem Pan</h5>
+                    <p class="card-text">Silvio Santos ouvia a rádio todas as manhãs.</p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4"> <!-- Segundo Card -->
+            <div class="card custom-card">
+                <img src="https://jpimg.com.br/uploads/2023/09/design-sem-nome-1-9-300x170.png" class="card-img-top img-fluid" alt="Notícia 5">
+                <div class="card-body">
+                    <h5 class="card-title">Inauguração de estúdio da Jovem Pan</h5>
+                    <p class="card-text">Reúne empresários e autoridades políticas.</p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-6 mb-4"> <!-- Mantido em 6 colunas -->
-        <div class="d-flex align-items-center">
-            <img src="https://jpimg.com.br/uploads/2024/09/morto-750x400.jpg" class="me-3" alt="Notícia 7"> <!-- Aumentado -->
-            <div>
-                <h5 class="card-title">Laudo mostra que homem morto pelo cunhado em São Paulo levou 11 facadas</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
+
+    <div class="row">
+        <div class="col-md-6 mb-4"> <!-- Terceiro Card -->
+            <div class="card custom-card">
+                <img src="https://img.youtube.com/vi/A4YZDGhSD5I/maxresdefault.jpg" class="card-img-top img-fluid" alt="Notícia 6">
+                <div class="card-body">
+                    <h5 class="card-title">O que esperar das eleições nos EUA?</h5>
+                    <p class="card-text"></p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4"> <!-- Quarto Card -->
+            <div class="card custom-card">
+                <img src="https://jpimg.com.br/uploads/2024/09/morto-750x400.jpg" class="card-img-top img-fluid" alt="Notícia 7">
+                <div class="card-body">
+                    <h5 class="card-title">Laudo mostra que homem morto pelo cunhado em São Paulo levou 11 facadas</h5>
+                    <p class="card-text"></p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
             </div>
         </div>
     </div>
