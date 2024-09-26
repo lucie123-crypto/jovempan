@@ -282,34 +282,30 @@
 
     </div>
     <div class="container text-left mt-4">
-        <h2 style="color: rgb(116, 110, 110); margin: 0;">
-            Entretenimento</h2>
-        <h6> Descubra as últimas novidades do entretenimento e mergulhe em um universo de cultura, música e cinema que
-            transforma o cotidiano em momentos de pura diversão!</h6>
+        <h2 style="color: rgb(116, 110, 110); margin: 0;">Entretenimento</h2>
+        <h6>Descubra as últimas novidades do entretenimento e mergulhe em um universo de cultura, música e cinema que transforma o cotidiano em momentos de pura diversão!</h6>
     </div>
-    <div class="container d-flex align-items-start mt-4">
-        <div class="video-container me-4">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/ORJHOn2kmKo" frameborder="0"
-                allowfullscreen></iframe>
+    
+    <div class="container mt-4 d-flex flex-column flex-md-row align-items-start">
+        <div class="video-container me-md-4 mb-3 mb-md-0">
+            <iframe class="img-fluid" width="100%" height="auto" src="https://www.youtube.com/embed/ORJHOn2kmKo" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="photo-container">
-            <div class="image-container">
-                <img src="https://jpimg.com.br/uploads/2024/09/2564c25faf9008139cf1f5b427ca7c7fb03f3e08-675x450.jpg"
-                    alt="Imagem 1" class="photo-image">
+        <div class="photo-container d-flex flex-wrap">
+            <div class="image-container me-3 mb-3">
+                <img src="https://jpimg.com.br/uploads/2024/09/2564c25faf9008139cf1f5b427ca7c7fb03f3e08-675x450.jpg" alt="Imagem 1" class="img-fluid photo-image">
                 <div class="overlay-text">Zac Efron revela tratamento com células-tronco após lesões em filmagem</div>
             </div>
             <div class="image-container">
-                <img src="https://jpimg.com.br/uploads/2024/09/max-750x398.jpg" alt="Imagem 1" class="photo-image">
-                <div class="overlay-text">‘Pinguim’ tem a maior estreia de série inédita na Max desde ‘The Last of Us’
-                </div>
+                <img src="https://jpimg.com.br/uploads/2024/09/max-750x398.jpg" alt="Imagem 2" class="img-fluid photo-image">
+                <div class="overlay-text">‘Pinguim’ tem a maior estreia de série inédita na Max desde ‘The Last of Us’</div>
             </div>
-
         </div>
     </div>
+    
     <div class="container text-center mt-4">
         <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem"
-            style="width: 700px; height: auto; border: 5px solid rgb(15, 15, 15); border-radius: 8px;"
-            class="mx-auto d-block">
+             class="img-fluid mx-auto d-block" 
+             style="border: 5px solid rgb(15, 15, 15); border-radius: 8px;">
     </div>
 
 
