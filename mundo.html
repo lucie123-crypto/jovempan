@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="https://logospng.org/download/jovem-pan/jovem-pan-256.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>JP News | Jovem Pan </title>
-</head>
-<style>
-    @media (min-width: 992px) {
+    <style>
+        @media (min-width: 992px) {
     .btn-custom {
         font-size: 1.2rem; /* Aumenta o tamanho dos botões no desktop */
     }
@@ -220,59 +216,89 @@
 .btn-custom:hover {
     background-color: #faf8f8; /* Efeito ao passar o mouse */
 }
-</style>
 
+
+    </style>
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo"
-                    class="d-inline-block align-top" style="width: 50px; height: 50px; margin-right: 10px;">
-                <h5 style="color: red; margin: 0;">JP NEWS</h5>
+                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+                <h5 class="text-danger fw-bold" style="margin: 0;">JP NEWS</h5>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <h7 style="color: rgb(255, 255, 255); margin: 0;">Mude A Cidade</h7>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <h7 style="color: rgb(255, 255, 255); margin: 0;">Ouça Ao Vivo</h7>
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mude A Cidade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ouça Ao Vivo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="politica.html">Política</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brasil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Economia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mundo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Esporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Saúde</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Entretenimento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                 </ul>
-                <form class="d-flex">
+                <form class="d-flex me-3">
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Pesquisar</button>
                 </form>
-                <a href="#" class="btn btn-danger">Entra Na Conta</a>
-                <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png"
-                    alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
+                <div class="d-none d-lg-block">
+                    <a href="#" class="btn btn-danger">Entrar Na Conta</a>
+                    <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png" alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
+                </div>
             </div>
         </div>
     </nav>
-
-    <div class="top-bar py-2">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top"></nav>
-            <a href="inicio_jp.html" class="btn">
-                <img href="inicio_jp.html"
-                    src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png"
-                    alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
-            </a>
-            <a href="politica.html" class="btn btn-custom">Política</a>
-<a href="Brasil.html" class="btn btn-custom">Brasil</a>
-<a href="economia.html" class="btn btn-custom">Economia</a>
-<a href="mundo.html" class="btn btn-custom">Mundo</a>
-<a href="site_esporte.html" class="btn btn-custom">Esporte</a>
-<a href="site_saude.html" class="btn btn-custom">Saúde</a>
-<a href="entreterimento.html" class="btn btn-custom">Entretenimento</a>
-<a href="contato.html" class="btn btn-custom">Contato</a>
+    
+    <div style="background-color: black; padding: 15px 0; position: relative; top: 56px; width: 100%; text-align: center;">
+        <div style="max-width: 70%; margin: 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <span class="text-light" style="margin-right: 10px;">JP NEWS</span>
+            <div class="pulsar"></div>
+            <marquee behavior="scroll" direction="left" scrollamount="15" style="white-space: nowrap; color: white;">
+                • Julgamento de recurso do acidente do voo Rio-Paris de 2009 será realizado na França em 2025
+                    • Rock in Rio 2024: confira programação desta sexta com line-up e horário dos shows
+                    • Bombeiros de Mato Grosso monitoram incêndios em 17 propriedades rurais
+                    • Consultoria afirma que Elon Musk será trilionário em 2027
+                    • Netanyahu reduz viagem aos EUA em meio a conflito com Hezbollah
+                    • TRE derruba propaganda de campanha de Ramagem que associava Paes ao assassinato de Marielle
+                    • Meta anuncia suspensão de anúncios políticos durante eleição após pedido do TSE
+                    • Israel lança maior bombardeio contra o Líbano desde início da guerra e mata comandante da força de elite do Hezbollah
+                    • Governo federal projeta mudanças no crédito consignado e saque-aniversário do FGTS
+                    • Detran-SP reforça ações na Semana Nacional de Trânsito
+                    • Banco Central comunica vazamento de 150 cadastros da Shopee
+                    • Pesquisas pós-debate mostram empate entre Kamala e Trump
+                    • Rio de Janeiro, São Paulo, Salvador e Curitiba serão afetadas pela migração climática, diz estudo
+                    • Paraná Pesquisas: Ricardo Nunes (MDB) lidera corrida para Prefeitura de SP com 26,8% de intenções de voto
+                    • Brasil registra baixa cobertura vacinal contra a dengue com 48,88% de doses aplicadas
+                    • Relatório da ONU e de ONGs denuncia tortura sistemática sob regime de Nicolás Maduro na Venezuela
+                    • Irã promete resposta esmagadora a Israel após ataques ao Líbano
+                    • Maduro critica opositor que buscou asilo na Espanha após derrota eleitoral
+                    • Polícia Civil identifica responsáveis por disparos que feriram adolescente em tiroteio no Complexo da Maré
+                    • Endrick é comparado a Ferenc Puskas após estreia na Liga dos Campeões
+                    • Mega-Sena acumula e prêmio chega a R$ 6 milhões
+                    • Flamengo é derrotado pelo Peñarol e volta a perder em casa na Libertadores após cinco anos
+                    • Rede social X acata ordem judicial e volta a ficar indisponível no Brasil
+                    • Hezbollah diz que Israel cruzou ‘linha vermelha’ e que ataques com pagers representam uma declaração de guerra
+                    • Governo Federal avança em projeto da ferrovia Transnordestina com investimento de R$ 15,2 milhões
+                    • Lula apresenta nova ministra dos Direitos Humanos em evento com Anielle Franco
+                    • Senacon investiga pré-instalação de aplicativos de apostas em celulares
+                    • Carregador portátil, capas de chuva e comida: confira itens essenciais para levar para o Rock in Rio
+                    • Dólar cai a menor valor em um mês e fecha a R$ 5,42 com diferencial de juro entre Fed e Copom
+                    • Israel bombardeia centenas de sistemas de lançadores de foguetes no Líbano
+                    • Ministro da Saúde do Líbano diz que ataques ao Hezbollah com pagers são crimes de guerra
+                    • X defende acesso de usuários no STF após bloqueio no Brasil
+                    • Lateral brasileiro se destaca e ajuda o Monaco a vencer o Barcelona em estreia na Liga dos Campeões
+                    • Rui Costa destaca colaboração de Estados para combater incêndios no Brasil
+                    • Brasil brilha no Mundial de Skate Park em Roma e 13 atletas garantem vaga nas quartas de final
+            </marquee>
+        </div>
     </div>
-</div>
 <div class="container text-center mt-4">
     <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
          class="responsive-image mx-auto d-block" 
