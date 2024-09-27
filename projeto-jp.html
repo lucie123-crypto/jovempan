@@ -73,7 +73,7 @@
             font-family: Arial, sans-serif;
         }
         .top-bar {
-            background-color: #080808;
+            background-color: #ffffff;
             color: #070707;
             text-align: center;
             padding: 5px;
@@ -226,6 +226,41 @@
     height: 600px; /* Ajuste a altura da imagem */
     object-fit: cover; /* Mantenha a proporção da imagem */
 }
+.navbar {
+            background-color: #83878b; /* Cor da navbar */
+        }
+    
+        .navbar-nav .nav-link {
+            color: #080808; /* Cor do texto dos links */
+            padding: 10px 15px; /* Padding para espaçamento */
+            transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+        }
+    
+        .navbar-nav .nav-link:hover {
+            background-color: #696363fa; /* Cor ao passar o mouse */
+            border-radius: 5px; /* Borda arredondada */
+            transform: scale(1.05); /* Efeito de leve aumento */
+        }
+    
+        .top-bar {
+            background-color: #f8f9fa; /* Cor da parte superior */
+        }
+    
+        .btn-custom {
+            color: #343a40; /* Cor dos botões */
+            border: 1px solid #bebfc0; /* Borda dos botões */
+            transition: background-color 0.3s; /* Transição suave */
+        }
+    
+        .btn-custom:hover {
+            background-color: #343a40; /* Cor ao passar o mouse */
+            color: #070707; /* Texto branco */
+        }
+        .marquee-text {
+            font-family: 'arial', sans-serif; /* Muda a fonte do marquee */
+            font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+            line-height: 30px; /* Ajuste a altura da linha */
+        }
 
 
     </style>
@@ -234,53 +269,44 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo" class="d-inline-block align-top" style="width: 50px; height: 50px; margin-right: 10px;">
-                <h5 style="color: red; margin: 0;">JP NEWS</h5>
+                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+                <h5 class="text-danger fw-bold" style="margin: 0;">JP NEWS</h5>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span style="color: rgb(255, 255, 255);">Mude A Cidade</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span style="color: rgb(255, 255, 255);">Ouça Ao Vivo</span></a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mude A Cidade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ouça Ao Vivo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="politica.html">Política</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Brasil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Economia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mundo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Esporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Saúde</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Entretenimento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                 </ul>
-                <form class="d-flex">
+                <form class="d-flex me-3">
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Pesquisar</button>
                 </form>
-                <a href="#" class="btn btn-danger">Entrar Na Conta</a>
-                <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png" alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
+                <div class="d-none d-lg-block">
+                    <a href="#" class="btn btn-danger">Entrar Na Conta</a>
+                    <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png" alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
+                </div>
             </div>
         </div>
     </nav>
     
-    <div class="top-bar py-2" style="margin-top: 60px;"> <!-- Adiciona margem para não sobrepor a navbar -->
-        <div class="container">
-            <div class="btn-group d-flex flex-wrap justify-content-between" role="group" aria-label="Basic example">
-                <a href="inicio_jp.html" class="btn">
-                    <img src="https://jovempan.com.br/wp-content/themes/jovempan/assets/build/images/jp-news-logo.png" alt="Descrição da imagem" class="img-fluid" style="max-width: 100px; cursor: pointer;">
-                </a>
-                <a href="politica.html" class="btn btn-custom">Política</a>
-                <a href="#" class="btn btn-custom">Brasil</a>
-                <a href="#" class="btn btn-custom">Economia</a>
-                <a href="#" class="btn btn-custom">Mundo</a>
-                <a href="#" class="btn btn-custom">Esporte</a>
-                <a href="#" class="btn btn-custom">Saúde</a>
-                <a href="#" class="btn btn-custom">Entretenimento</a>
-                <a href="contato.html" class="btn btn-custom">Contato</a>
-            </div>
-        </div>
-        <div class="container">
-            <div class="d-flex align-items-center">
-                <span class="text-light">JP NEWS</span>
-                <div class="pulsar"></div>
-                <marquee behavior="scroll" direction="left" scrollamount="15" class="text-light ms-3">
-                    • Julgamento de recurso do acidente do voo Rio-Paris de 2009 será realizado na França em 2025
+    <div style="background-color: black; padding: 15px 0; position: relative; top: 56px; width: 100%; text-align: center;">
+        <div style="max-width: 70%; margin: 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <span class="text-light" style="margin-right: 10px;">JP NEWS</span>
+            <div class="pulsar"></div>
+            <marquee behavior="scroll" direction="left" scrollamount="15" style="white-space: nowrap; color: white;">
+                • Julgamento de recurso do acidente do voo Rio-Paris de 2009 será realizado na França em 2025
                     • Rock in Rio 2024: confira programação desta sexta com line-up e horário dos shows
                     • Bombeiros de Mato Grosso monitoram incêndios em 17 propriedades rurais
                     • Consultoria afirma que Elon Musk será trilionário em 2027
@@ -315,14 +341,13 @@
                     • Lateral brasileiro se destaca e ajuda o Monaco a vencer o Barcelona em estreia na Liga dos Campeões
                     • Rui Costa destaca colaboração de Estados para combater incêndios no Brasil
                     • Brasil brilha no Mundial de Skate Park em Roma e 13 atletas garantem vaga nas quartas de final
-                </marquee>
-            </div>
+            </marquee>
         </div>
     </div>
     <div class="container text-center mt-4">
         <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
              class="responsive-image mx-auto d-block" 
-             style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
+             style="border: 5px solid rgb(15, 15, 15); border-radius: 8px;">
     </div>
     
     <div class="container text-left mt-4">
