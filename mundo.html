@@ -1,92 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="https://logospng.org/download/jovem-pan/jovem-pan-256.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <title>JP News | Jovem Pan </title>
     <style>
         @media (min-width: 992px) {
-    .btn-custom {
-        font-size: 1.2rem; /* Aumenta o tamanho dos botões no desktop */
-    }
-}
+            .btn-custom {
+                font-size: 1.2rem;
+                /* Aumenta o tamanho dos botões no desktop */
+            }
+        }
 
-@media (max-width: 991px) {
-    .btn-custom {
-        font-size: 0.9rem; /* Diminui o tamanho dos botões em celulares */
-    }
-}
+        @media (max-width: 991px) {
+            .btn-custom {
+                font-size: 0.9rem;
+                /* Diminui o tamanho dos botões em celulares */
+            }
+        }
+
         .custom-card {
-    width: 100%; /* Para ocupar toda a largura da coluna */
-    max-width: 700px; /* Largura máxima desejada */
-    margin: auto; /* Centraliza o card */
-}
+            width: 100%;
+            /* Para ocupar toda a largura da coluna */
+            max-width: 700px;
+            /* Largura máxima desejada */
+            margin: auto;
+            /* Centraliza o card */
+        }
+
         .responsive-image {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-}
+            max-width: 100%;
+            /* Garante que a imagem não ultrapasse a largura do contêiner */
+            height: auto;
+            /* Mantém a proporção da imagem */
+        }
 
-.video-container {
-    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
-    max-width: 800px; /* Limite de largura do vídeo */
-    margin-bottom: 20px; /* Espaçamento inferior em telas pequenas */
-}
+        .video-container {
+            width: 100%;
+            /* Garante que o vídeo ocupe toda a largura do contêiner */
+            max-width: 800px;
+            /* Limite de largura do vídeo */
+            margin-bottom: 20px;
+            /* Espaçamento inferior em telas pequenas */
+        }
 
-.video-container iframe {
-    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
-    height: auto; /* Mantém a proporção do vídeo */
-    aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
-}
+        .video-container iframe {
+            width: 100%;
+            /* Garante que o vídeo ocupe toda a largura do contêiner */
+            height: auto;
+            /* Mantém a proporção do vídeo */
+            aspect-ratio: 16 / 9;
+            /* Mantém a proporção 16:9 */
+        }
 
-.photo-container {
-    display: flex; /* Permite que as imagens fiquem lado a lado */
-    flex-direction: column; /* As imagens ficam em coluna por padrão */
-    justify-content: flex-start; /* Alinha ao topo */
-    gap: 10px; /* Espaçamento entre as imagens */
-}
+        .photo-container {
+            display: flex;
+            /* Permite que as imagens fiquem lado a lado */
+            flex-direction: column;
+            /* As imagens ficam em coluna por padrão */
+            justify-content: flex-start;
+            /* Alinha ao topo */
+            gap: 10px;
+            /* Espaçamento entre as imagens */
+        }
 
-/* Media Query para telas maiores */
-@media (min-width: 768px) {
-    .video-container {
-        margin-bottom: 0; /* Remove o espaçamento inferior em telas grandes */
-    }
+        /* Media Query para telas maiores */
+        @media (min-width: 768px) {
+            .video-container {
+                margin-bottom: 0;
+                /* Remove o espaçamento inferior em telas grandes */
+            }
 
-    .photo-container {
-        flex-direction: row; /* Alinha as imagens lado a lado em telas maiores */
-    }
+            .photo-container {
+                flex-direction: row;
+                /* Alinha as imagens lado a lado em telas maiores */
+            }
 
-    .photo-image {
-        flex: 1; /* As imagens ocupam espaço igual */
-        min-width: 200px; /* Largura mínima para as imagens */
-        max-width: 100%; /* Garante que não ultrapassem a largura do contêiner */
-    }
-}
+            .photo-image {
+                flex: 1;
+                /* As imagens ocupam espaço igual */
+                min-width: 200px;
+                /* Largura mínima para as imagens */
+                max-width: 100%;
+                /* Garante que não ultrapassem a largura do contêiner */
+            }
+        }
 
         body {
             background-color: #ffffff;
             color: #181717;
             font-family: Arial, sans-serif;
         }
+
         .top-bar {
-            background-color: #080808;
+            background-color: #ffffff;
             color: #070707;
             text-align: center;
             padding: 5px;
             font-weight: bold;
         }
+
         a {
             color: #000000;
             text-decoration: none;
         }
+
         a:hover {
             color: #f10101;
             text-decoration: underline;
         }
+
         .pulsar {
             display: inline-block;
             width: 10px;
@@ -96,75 +128,119 @@
             margin-right: 5px;
             animation: pulsate 1s infinite alternate;
         }
-        @keyframes pulsate {
-            0% { background-color: red; }
-            100% { background-color: white; }
-        }
-        .custom-image {
-    width: 100%; /* Largura total do contêiner */
-    max-width: 800px; /* Largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-top: 20px; /* Espaçamento do topo */
-}
-        
-        .photo-container {
-    display: flex;
-    flex-direction: column; /* Coloca as fotos uma em cima da outra */
-    gap: 10px; /* Espaçamento entre as fotos */
-    margin-left: 20px; /* Espaçamento à esquerda das imagens */
-}
 
-.photo-image {
-    width: 380px; /* Ajuste a largura das imagens para ficarem menores */
-    height: auto; /* Mantém a proporção da imagem */
-}
-.card {
-            margin-bottom: 15px; /* Espaçamento entre os cards */
-            max-width: 350px; /* Largura máxima dos cards */
+        @keyframes pulsate {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: white;
+            }
         }
+
+        .custom-image {
+            width: 100%;
+            /* Largura total do contêiner */
+            max-width: 800px;
+            /* Largura máxima da imagem */
+            height: auto;
+            /* Mantém a proporção da imagem */
+            margin-top: 20px;
+            /* Espaçamento do topo */
+        }
+
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            /* Coloca as fotos uma em cima da outra */
+            gap: 10px;
+            /* Espaçamento entre as fotos */
+            margin-left: 20px;
+            /* Espaçamento à esquerda das imagens */
+        }
+
+        .photo-image {
+            width: 380px;
+            /* Ajuste a largura das imagens para ficarem menores */
+            height: auto;
+            /* Mantém a proporção da imagem */
+        }
+
+        .card {
+            margin-bottom: 15px;
+            /* Espaçamento entre os cards */
+            max-width: 350px;
+            /* Largura máxima dos cards */
+        }
+
         .description {
             display: flex;
-            flex-direction: column; /* Imagem em cima do texto */
+            flex-direction: column;
+            /* Imagem em cima do texto */
         }
+
         .description-text {
-            margin-top: 10px; /* Espaço entre imagem e texto */
+            margin-top: 10px;
+            /* Espaço entre imagem e texto */
         }
+
         .img-left {
-            margin-right: 10px; /* Espaço entre imagem e texto à esquerda */
+            margin-right: 10px;
+            /* Espaço entre imagem e texto à esquerda */
         }
+
         @media (min-width: 768px) {
             .description {
-                flex-direction: row; /* Imagem ao lado do texto em telas maiores */
+                flex-direction: row;
+                /* Imagem ao lado do texto em telas maiores */
             }
+
             .description-text {
-                margin-top: 0; /* Remove o espaço entre imagem e texto em telas maiores */
+                margin-top: 0;
+                /* Remove o espaço entre imagem e texto em telas maiores */
             }
         }
+
         .description img {
-    margin-right: 30px; /* Aumenta o espaço à direita da imagem */
-}
-.card-img-top {
-    width: auto; /* Mantém a largura automática */
-    height: 200px; /* Define uma altura fixa (ajuste conforme necessário) */
-    object-fit: cover; /* Corta a imagem se necessário, mantendo a proporção */
-}
+            margin-right: 30px;
+            /* Aumenta o espaço à direita da imagem */
+        }
 
-.description {
-    display: flex;
-    align-items: flex-start; /* Alinha o conteúdo ao topo */
-}
-.card {
-    width: 100%; /* Certifica-se de que o card ocupe toda a largura da coluna */
-}
+        .card-img-top {
+            width: auto;
+            /* Mantém a largura automática */
+            height: 200px;
+            /* Define uma altura fixa (ajuste conforme necessário) */
+            object-fit: cover;
+            /* Corta a imagem se necessário, mantendo a proporção */
+        }
 
-.d-flex img {
-    max-width: 400px; /* Limita a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    flex-shrink: 0; /* Impede que a imagem encolha */
-}.sidebar {
+        .description {
+            display: flex;
+            align-items: flex-start;
+            /* Alinha o conteúdo ao topo */
+        }
+
+        .card {
+            width: 100%;
+            /* Certifica-se de que o card ocupe toda a largura da coluna */
+        }
+
+        .d-flex img {
+            max-width: 400px;
+            /* Limita a largura da imagem */
+            height: auto;
+            /* Mantém a proporção da imagem */
+            flex-shrink: 0;
+            /* Impede que a imagem encolha */
+        }
+
+        .sidebar {
             position: fixed;
             top: 0;
-            left: -250px; /* Escondida inicialmente */
+            left: -250px;
+            /* Escondida inicialmente */
             width: 250px;
             height: 100%;
             background-color: #343a40;
@@ -172,65 +248,156 @@
             transition: left 0.3s;
             padding-top: 20px;
         }
+
         .menu-toggle {
             position: fixed;
             top: 20px;
             left: 20px;
             font-size: 24px;
             cursor: pointer;
-            z-index: 1000; /* Fica acima de outros elementos */
+            z-index: 1000;
+            /* Fica acima de outros elementos */
         }
+
         /* Mostrar a sidebar ao passar o mouse sobre o botão */
-        .menu-toggle:hover + .sidebar {
-            left: 0; /* Exibe a sidebar */
+        .menu-toggle:hover+.sidebar {
+            left: 0;
+            /* Exibe a sidebar */
         }
+
         .sidebar a {
             color: rgb(0, 0, 0);
             text-decoration: none;
             display: block;
             padding: 10px;
         }
+
         .sidebar a:hover {
             background-color: #ffffff;
         }
+
         .card {
-            margin: 15px; /* Espaçamento entre os cards */
-            width: 300px; /* Largura fixa para os cards */
+            margin: 15px;
+            /* Espaçamento entre os cards */
+            width: 300px;
+            /* Largura fixa para os cards */
         }
+
         .card-text {
-            text-align: right; /* Alinha o texto à direita */
+            text-align: right;
+            /* Alinha o texto à direita */
         }
+
         .card-container {
-            margin-left: -10%; /* Ajusta a posição dos cards para a direita */
+            margin-left: -10%;
+            /* Ajusta a posição dos cards para a direita */
         }
+
         .side-image {
-            max-width: 300px; /* Limita a largura da imagem lateral */
-            margin-left: 100px; /* Espaço entre os cards e a imagem */
+            max-width: 300px;
+            /* Limita a largura da imagem lateral */
+            margin-left: 100px;
+            /* Espaço entre os cards e a imagem */
         }
+
         .btn-custom {
-    background-color: rgb(7, 7, 7); /* Fundo branco */
-    color: rgb(255, 245, 245); /* Texto preto */
-    border: 1px solid #000000; /* Borda opcional */
-}
+            background-color: rgb(7, 7, 7);
+            /* Fundo branco */
+            color: rgb(255, 245, 245);
+            /* Texto preto */
+            border: 1px solid #000000;
+            /* Borda opcional */
+        }
 
-.btn-custom:hover {
-    background-color: #faf8f8; /* Efeito ao passar o mouse */
-}
+        .btn-custom:hover {
+            background-color: #faf8f8;
+            /* Efeito ao passar o mouse */
+        }
 
+        .custom-card {
+            width: 200%;
+            /* Ajuste a largura do card */
+            height: 400px;
+            /* Ajuste a altura do card */
+            margin: 10px 0;
+            /* Margem entre os cards */
+        }
 
+        .card-img-top {
+            height: 600px;
+            /* Ajuste a altura da imagem */
+            object-fit: cover;
+            /* Mantenha a proporção da imagem */
+        }
+
+        .navbar {
+            background-color: #83878b;
+            /* Cor da navbar */
+        }
+
+        .navbar-nav .nav-link {
+            color: #080808;
+            /* Cor do texto dos links */
+            padding: 10px 15px;
+            /* Padding para espaçamento */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Transições suaves */
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #696363fa;
+            /* Cor ao passar o mouse */
+            border-radius: 5px;
+            /* Borda arredondada */
+            transform: scale(1.05);
+            /* Efeito de leve aumento */
+        }
+
+        .top-bar {
+            background-color: #f8f9fa;
+            /* Cor da parte superior */
+        }
+
+        .btn-custom {
+            color: #343a40;
+            /* Cor dos botões */
+            border: 1px solid #bebfc0;
+            /* Borda dos botões */
+            transition: background-color 0.3s;
+            /* Transição suave */
+        }
+
+        .btn-custom:hover {
+            background-color: #343a40;
+            /* Cor ao passar o mouse */
+            color: #070707;
+            /* Texto branco */
+        }
+
+        .marquee-text {
+            font-family: 'arial', sans-serif;
+            /* Muda a fonte do marquee */
+            font-size: 18px;
+            /* Ajuste o tamanho da fonte conforme necessário */
+            line-height: 30px;
+            /* Ajuste a altura da linha */
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+                <img src="https://logospng.org/download/jovem-pan/jovem-pan-256.png" alt="JP NEWS Logo"
+                    style="width: 50px; height: 50px; margin-right: 10px;">
                 <h5 class="text-danger fw-bold" style="margin: 0;">JP NEWS</h5>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#">Mude A Cidade</a></li>
@@ -250,105 +417,119 @@
                 </form>
                 <div class="d-none d-lg-block">
                     <a href="#" class="btn btn-danger">Entrar Na Conta</a>
-                    <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png" alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
+                    <img src="https://e7.pngegg.com/pngimages/674/558/png-clipart-avatar-computer-icons-my-account-icon-angle-text-thumbnail.png"
+                        alt="Imagem" style="width: 30px; height: 30px; margin-left: 10px;">
                 </div>
             </div>
         </div>
     </nav>
-    
-    <div style="background-color: black; padding: 15px 0; position: relative; top: 56px; width: 100%; text-align: center;">
-        <div style="max-width: 70%; margin: 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+
+    <div
+        style="background-color: black; padding: 15px 0; position: relative; top: 56px; width: 100%; text-align: center;">
+        <div
+            style="max-width: 70%; margin: 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <span class="text-light" style="margin-right: 10px;">JP NEWS</span>
             <div class="pulsar"></div>
             <marquee behavior="scroll" direction="left" scrollamount="15" style="white-space: nowrap; color: white;">
                 • Julgamento de recurso do acidente do voo Rio-Paris de 2009 será realizado na França em 2025
-                    • Rock in Rio 2024: confira programação desta sexta com line-up e horário dos shows
-                    • Bombeiros de Mato Grosso monitoram incêndios em 17 propriedades rurais
-                    • Consultoria afirma que Elon Musk será trilionário em 2027
-                    • Netanyahu reduz viagem aos EUA em meio a conflito com Hezbollah
-                    • TRE derruba propaganda de campanha de Ramagem que associava Paes ao assassinato de Marielle
-                    • Meta anuncia suspensão de anúncios políticos durante eleição após pedido do TSE
-                    • Israel lança maior bombardeio contra o Líbano desde início da guerra e mata comandante da força de elite do Hezbollah
-                    • Governo federal projeta mudanças no crédito consignado e saque-aniversário do FGTS
-                    • Detran-SP reforça ações na Semana Nacional de Trânsito
-                    • Banco Central comunica vazamento de 150 cadastros da Shopee
-                    • Pesquisas pós-debate mostram empate entre Kamala e Trump
-                    • Rio de Janeiro, São Paulo, Salvador e Curitiba serão afetadas pela migração climática, diz estudo
-                    • Paraná Pesquisas: Ricardo Nunes (MDB) lidera corrida para Prefeitura de SP com 26,8% de intenções de voto
-                    • Brasil registra baixa cobertura vacinal contra a dengue com 48,88% de doses aplicadas
-                    • Relatório da ONU e de ONGs denuncia tortura sistemática sob regime de Nicolás Maduro na Venezuela
-                    • Irã promete resposta esmagadora a Israel após ataques ao Líbano
-                    • Maduro critica opositor que buscou asilo na Espanha após derrota eleitoral
-                    • Polícia Civil identifica responsáveis por disparos que feriram adolescente em tiroteio no Complexo da Maré
-                    • Endrick é comparado a Ferenc Puskas após estreia na Liga dos Campeões
-                    • Mega-Sena acumula e prêmio chega a R$ 6 milhões
-                    • Flamengo é derrotado pelo Peñarol e volta a perder em casa na Libertadores após cinco anos
-                    • Rede social X acata ordem judicial e volta a ficar indisponível no Brasil
-                    • Hezbollah diz que Israel cruzou ‘linha vermelha’ e que ataques com pagers representam uma declaração de guerra
-                    • Governo Federal avança em projeto da ferrovia Transnordestina com investimento de R$ 15,2 milhões
-                    • Lula apresenta nova ministra dos Direitos Humanos em evento com Anielle Franco
-                    • Senacon investiga pré-instalação de aplicativos de apostas em celulares
-                    • Carregador portátil, capas de chuva e comida: confira itens essenciais para levar para o Rock in Rio
-                    • Dólar cai a menor valor em um mês e fecha a R$ 5,42 com diferencial de juro entre Fed e Copom
-                    • Israel bombardeia centenas de sistemas de lançadores de foguetes no Líbano
-                    • Ministro da Saúde do Líbano diz que ataques ao Hezbollah com pagers são crimes de guerra
-                    • X defende acesso de usuários no STF após bloqueio no Brasil
-                    • Lateral brasileiro se destaca e ajuda o Monaco a vencer o Barcelona em estreia na Liga dos Campeões
-                    • Rui Costa destaca colaboração de Estados para combater incêndios no Brasil
-                    • Brasil brilha no Mundial de Skate Park em Roma e 13 atletas garantem vaga nas quartas de final
+                • Rock in Rio 2024: confira programação desta sexta com line-up e horário dos shows
+                • Bombeiros de Mato Grosso monitoram incêndios em 17 propriedades rurais
+                • Consultoria afirma que Elon Musk será trilionário em 2027
+                • Netanyahu reduz viagem aos EUA em meio a conflito com Hezbollah
+                • TRE derruba propaganda de campanha de Ramagem que associava Paes ao assassinato de Marielle
+                • Meta anuncia suspensão de anúncios políticos durante eleição após pedido do TSE
+                • Israel lança maior bombardeio contra o Líbano desde início da guerra e mata comandante da força de
+                elite do Hezbollah
+                • Governo federal projeta mudanças no crédito consignado e saque-aniversário do FGTS
+                • Detran-SP reforça ações na Semana Nacional de Trânsito
+                • Banco Central comunica vazamento de 150 cadastros da Shopee
+                • Pesquisas pós-debate mostram empate entre Kamala e Trump
+                • Rio de Janeiro, São Paulo, Salvador e Curitiba serão afetadas pela migração climática, diz estudo
+                • Paraná Pesquisas: Ricardo Nunes (MDB) lidera corrida para Prefeitura de SP com 26,8% de intenções de
+                voto
+                • Brasil registra baixa cobertura vacinal contra a dengue com 48,88% de doses aplicadas
+                • Relatório da ONU e de ONGs denuncia tortura sistemática sob regime de Nicolás Maduro na Venezuela
+                • Irã promete resposta esmagadora a Israel após ataques ao Líbano
+                • Maduro critica opositor que buscou asilo na Espanha após derrota eleitoral
+                • Polícia Civil identifica responsáveis por disparos que feriram adolescente em tiroteio no Complexo da
+                Maré
+                • Endrick é comparado a Ferenc Puskas após estreia na Liga dos Campeões
+                • Mega-Sena acumula e prêmio chega a R$ 6 milhões
+                • Flamengo é derrotado pelo Peñarol e volta a perder em casa na Libertadores após cinco anos
+                • Rede social X acata ordem judicial e volta a ficar indisponível no Brasil
+                • Hezbollah diz que Israel cruzou ‘linha vermelha’ e que ataques com pagers representam uma declaração
+                de guerra
+                • Governo Federal avança em projeto da ferrovia Transnordestina com investimento de R$ 15,2 milhões
+                • Lula apresenta nova ministra dos Direitos Humanos em evento com Anielle Franco
+                • Senacon investiga pré-instalação de aplicativos de apostas em celulares
+                • Carregador portátil, capas de chuva e comida: confira itens essenciais para levar para o Rock in Rio
+                • Dólar cai a menor valor em um mês e fecha a R$ 5,42 com diferencial de juro entre Fed e Copom
+                • Israel bombardeia centenas de sistemas de lançadores de foguetes no Líbano
+                • Ministro da Saúde do Líbano diz que ataques ao Hezbollah com pagers são crimes de guerra
+                • X defende acesso de usuários no STF após bloqueio no Brasil
+                • Lateral brasileiro se destaca e ajuda o Monaco a vencer o Barcelona em estreia na Liga dos Campeões
+                • Rui Costa destaca colaboração de Estados para combater incêndios no Brasil
+                • Brasil brilha no Mundial de Skate Park em Roma e 13 atletas garantem vaga nas quartas de final
             </marquee>
         </div>
     </div>
-<div class="container text-center mt-4">
-    <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem" 
-         class="responsive-image mx-auto d-block" 
-         style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
-</div>
+    <div class="container text-center mt-4">
+        <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem"
+            class="responsive-image mx-auto d-block" style="border: 5px solid rgb(10, 10, 10); border-radius: 8px;">
+    </div>
 
 
     </div>
     <div class="container mt-4">
         <h2 style="color: rgb(116, 110, 110); margin: 0;">Mundo</h2>
-        <h6>Explore as últimas tendências e acontecimentos que moldam o nosso mundo, trazendo informações essenciais para você entender a dinâmica global.</h6>
+        <h6>Explore as últimas tendências e acontecimentos que moldam o nosso mundo, trazendo informações essenciais
+            para você entender a dinâmica global.</h6>
     </div>
-    
+
     <div class="container d-flex flex-column flex-md-row align-items-start mt-4">
         <div class="video-container me-md-4 mb-4 mb-md-0">
-            <iframe class="w-100" src="https://www.youtube.com/embed/0kRJxyRN1Vw" frameborder="0" allowfullscreen></iframe>
+            <iframe class="w-100" src="https://www.youtube.com/embed/0kRJxyRN1Vw?autoplay=1&mute=1" frameborder="0"
+                allowfullscreen></iframe>
         </div>
         <div class="photo-container d-flex flex-wrap justify-content-start">
             <div class="image-container position-relative me-4 mb-4">
-                <img src="https://jpimg.com.br/uploads/2023/12/lula-e-olaf-scolz-750x450.jpg" alt="Imagem 1" class="photo-image img-fluid">
-                <div class="overlay-text position-absolute bottom-0 start-0 p-2 text-white bg-dark bg-opacity-50 w-100">Lula se reúne com Scholz, da Alemanha, e conversa sobre cooperação entre os países</div>
+                <img src="https://jpimg.com.br/uploads/2023/12/lula-e-olaf-scolz-750x450.jpg" alt="Imagem 1"
+                    class="photo-image img-fluid">
+                <div class="overlay-text position-absolute bottom-0 start-0 p-2 text-white bg-dark bg-opacity-50 w-100">
+                    Lula se reúne com Scholz, da Alemanha, e conversa sobre cooperação entre os países</div>
             </div>
             <div class="image-container position-relative me-4 mb-4">
-                <img src="https://jpimg.com.br/uploads/2024/05/kharkiv-750x450.jpg" alt="Imagem 2" class="photo-image img-fluid">
-                <div class="overlay-text position-absolute bottom-0 start-0 p-2 text-white bg-dark bg-opacity-50 w-100">Ucrânia afirma ter entrado na região russa de Kursk por outro segmento da fronteira</div>
+                <img src="https://jpimg.com.br/uploads/2024/05/kharkiv-750x450.jpg" alt="Imagem 2"
+                    class="photo-image img-fluid">
+                <div class="overlay-text position-absolute bottom-0 start-0 p-2 text-white bg-dark bg-opacity-50 w-100">
+                    Ucrânia afirma ter entrado na região russa de Kursk por outro segmento da fronteira</div>
             </div>
         </div>
     </div>
-    
+
     <div class="container text-center mt-4">
         <img src="https://tpc.googlesyndication.com/simgad/13198354872875258707" alt="Descrição da Imagem"
-             class="img-fluid mx-auto d-block" 
-             style="border: 5px solid rgb(15, 15, 15); border-radius: 8px;">
+            class="img-fluid mx-auto d-block" style="border: 5px solid rgb(15, 15, 15); border-radius: 8px;">
     </div>
-    
+
     <div class="container mt-4">
         <h2 class="text-center"></h2>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="https://jpimg.com.br/uploads/2024/02/000_34jh3rr-676x450.jpg" class="card-img-top" alt="Notícia 1">
+                    <img src="https://jpimg.com.br/uploads/2024/02/000_34jh3rr-676x450.jpg" class="card-img-top"
+                        alt="Notícia 1">
                     <div class="card-body">
-                        <h5 class="card-title">Hezbollah amplia alcance de ataques contra Israel com foguetes e drones</h5>
+                        <h5 class="card-title">Hezbollah amplia alcance de ataques contra Israel com foguetes e drones
+                        </h5>
                         <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="https://jpimg.com.br/uploads/2024/09/ira-750x450.jpg" class="card-img-top" alt="Notícia 2">
+                    <img src="https://jpimg.com.br/uploads/2024/09/ira-750x450.jpg" class="card-img-top"
+                        alt="Notícia 2">
                     <div class="card-body">
                         <h5 class="card-title">Explosão em mina de carvão no Irã deixa 51 mortos e 20 feridos</h5>
                         <a href="#" class="btn btn-dark">Leia mais</a>
@@ -357,9 +538,11 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="https://jpimg.com.br/uploads/2023/06/titan-oceangate-750x450.jpg" class="card-img-top" alt="Notícia 3">
+                    <img src="https://jpimg.com.br/uploads/2023/06/titan-oceangate-750x450.jpg" class="card-img-top"
+                        alt="Notícia 3">
                     <div class="card-body">
-                        <h5 class="card-title">Documentarista que desistiu de viajar ao Titanic diz que submersível era uma bomba-relógio: ‘Desastroso’</h5>
+                        <h5 class="card-title">Documentarista que desistiu de viajar ao Titanic diz que submersível era
+                            uma bomba-relógio: ‘Desastroso’</h5>
                         <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
                 </div>
@@ -369,13 +552,15 @@
 
     <div class="container mt-4 text-center">
         <h2>Notícias em Destaque</h2> <!-- Adicione um título se necessário -->
-    
+
         <div class="row">
             <div class="col-md-6 mb-4">
                 <div class="d-flex align-items-center">
-                    <img src="https://jpimg.com.br/uploads/2024/09/6307e0fbaf59c740598f5ea80d9bca078215179f-675x450.jpg" class="me-3 img-fluid" alt="Notícia 4">
+                    <img src="https://jpimg.com.br/uploads/2024/09/6307e0fbaf59c740598f5ea80d9bca078215179f-675x450.jpg"
+                        class="me-3 img-fluid" alt="Notícia 4">
                     <div>
-                        <h5 class="card-title">Israel não pode atacar membros do Hezbollah sem participação ativa em combates, diz ONU</h5>
+                        <h5 class="card-title">Israel não pode atacar membros do Hezbollah sem participação ativa em
+                            combates, diz ONU</h5>
                         <p class="card-text"></p>
                         <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
@@ -383,7 +568,8 @@
             </div>
             <div class="col-md-6 mb-4">
                 <div class="d-flex align-items-center">
-                    <img src="https://jpimg.com.br/uploads/2024/09/9471e4cf642f1178659f53fa9a1393f9aac2f0ab-675x450.jpg" class="me-3 img-fluid" alt="Notícia 5">
+                    <img src="https://jpimg.com.br/uploads/2024/09/9471e4cf642f1178659f53fa9a1393f9aac2f0ab-675x450.jpg"
+                        class="me-3 img-fluid" alt="Notícia 5">
                     <div>
                         <h5 class="card-title">Quatro membros da mesma família morrem em desabamento na Itália</h5>
                         <p class="card-text"></p>
@@ -392,13 +578,15 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="row">
             <div class="col-md-6 mb-4">
                 <div class="d-flex align-items-center">
-                    <img src="https://jpimg.com.br/uploads/2024/07/000_34wu2mz-676x450.jpg" class="me-3 img-fluid" alt="Notícia 6">
+                    <img src="https://jpimg.com.br/uploads/2024/07/000_34wu2mz-676x450.jpg" class="me-3 img-fluid"
+                        alt="Notícia 6">
                     <div>
-                        <h5 class="card-title">Kate Middleton retorna ao trabalho após quimioterapia e foca em projeto infantil</h5>
+                        <h5 class="card-title">Kate Middleton retorna ao trabalho após quimioterapia e foca em projeto
+                            infantil</h5>
                         <p class="card-text"></p>
                         <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
@@ -406,9 +594,11 @@
             </div>
             <div class="col-md-6 mb-4">
                 <div class="d-flex align-items-center">
-                    <img src="https://jpimg.com.br/uploads/2024/09/6ea443b4036812b9df3fce1fc5b024c3cba0ecd8-750x450.jpg" class="me-3 img-fluid" alt="Notícia 7">
+                    <img src="https://jpimg.com.br/uploads/2024/09/6ea443b4036812b9df3fce1fc5b024c3cba0ecd8-750x450.jpg"
+                        class="me-3 img-fluid" alt="Notícia 7">
                     <div>
-                        <h5 class="card-title">Acusado de tentar matar Trump confessa em bilhete tentativa de assassinato</h5>
+                        <h5 class="card-title">Acusado de tentar matar Trump confessa em bilhete tentativa de
+                            assassinato</h5>
                         <p class="card-text"></p>
                         <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
@@ -417,198 +607,198 @@
         </div>
     </div>
 
-        <div class="container" style="margin-top: 100px;"> <!-- Ajuste para não sobrepor a navbar -->
-            <div class="d-flex justify-content-start align-items-start"> <!-- Flexbox para alinhar cards e imagem -->
-                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/ataque-no-libano-750x450.jpg"
-                            class="card-img-top" alt="Imagem do Card 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Conselho de Segurança da ONU convoca reunião de emergência após
-                                explosão de pagers e walkie-talkies no Líbano
-                            </h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/captura-de-tela-2024-09-15-as-12.56.11-345x194.jpeg"
-                            class="card-img-top" alt="Imagem do Card 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Venezuela prende cidadãos dos EUA, Espanha e República Tcheca por
-                                suposta conspiração contra Maduro</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/10/furacao.jpg"
-                            class="card-img-top" alt="Imagem do Card 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Furacão Francine se aproxima da Louisiana e estado de emergência é
-                                declarado nos EUA</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
+    <div class="container" style="margin-top: 100px;"> <!-- Ajuste para não sobrepor a navbar -->
+        <div class="d-flex justify-content-start align-items-start"> <!-- Flexbox para alinhar cards e imagem -->
+            <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/ataque-no-libano-750x450.jpg" class="card-img-top"
+                        alt="Imagem do Card 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Conselho de Segurança da ONU convoca reunião de emergência após
+                            explosão de pagers e walkie-talkies no Líbano
+                        </h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="d-flex justify-content-start align-items-start">
-                <!-- Segunda linha de cards sem margem superior -->
-                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/9306bf5c2bc59baa03638fcca6b6388604ebdccd-326x207.jpg"
-                            class="card-img-top" alt="Imagem do Card 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Trump culpa Biden e Kamala por incitar atentado contra ele em campo
-                                de golfe</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/07/cob-712x450.png" class="card-img-top"
-                            alt="Imagem do Card 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Governo francês frustra três planos de ataques terroristas durante os
-                                Jogos de Paris-2024</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/incendio-nos-eua-750x450.jpg"
-                            class="card-img-top" alt="Imagem do Card 6">
-                        <div class="card-body">
-                            <h5 class="card-title">Governo da Califórnia declara estado de emergência após incêndios
-                                devastarem a região</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/captura-de-tela-2024-09-15-as-12.56.11-345x194.jpeg"
+                        class="card-img-top" alt="Imagem do Card 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Venezuela prende cidadãos dos EUA, Espanha e República Tcheca por
+                            suposta conspiração contra Maduro</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-start align-items-start">
-                <!-- Segunda linha de cards sem margem superior -->
-                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/000_36gd8ch-676x450.jpg" class="card-img-top"
-                            alt="Imagem do Card 4">
-                        <div class="card-body">
-                            <h5 class="card-title">FBI investiga nova tentativa de assassinato contra Trump após tiros
-                                serem disparados perto do seu clube de golfe</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/aabf0d0c0664f869a204b02185e741629966532b-675x450.jpg"
-                            class="card-img-top" alt="Imagem do Card 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Tempestade tropical Francine atinge Louisiana e gera preocupações com
-                                inundações</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/000_36g33f9-345x199.jpg" class="card-img-top"
-                            alt="Imagem do Card 6">
-                        <div class="card-body">
-                            <h5 class="card-title">SpaceX faz história com primeira caminhada espacial privada</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-start align-items-start">
-                <!-- Segunda linha de cards sem margem superior -->
-                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/aysenur-ezgi-eyg-345x207.jpg"
-                            class="card-img-top" alt="Imagem do Card 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Israel diz que pode ter matado ‘acidentalmente’ ativista dos EUA na
-                                Cisjordânia</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2023/09/51887651804_613af6c21f_o-300x170.jpg"
-                            class="card-img-top" alt="Imagem do Card 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Presidente do STF defende na ONU a necessidade do combate de crimes
-                                ambientais no Brasil</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2019/06/european-union-4205972_640.jpg"
-                            class="card-img-top" alt="Imagem do Card 6">
-                        <div class="card-body">
-                            <h5 class="card-title">União Europeia diz que ainda não está pronta para concluir acordo de
-                                associação com Mercosul</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-start align-items-start">
-                <!-- Segunda linha de cards sem margem superior -->
-                <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/6c4bfa60234864a3f73c16130d43254e83190d12-310x207.jpg"
-                            class="card-img-top" alt="Imagem do Card 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Ataque aéreo de Israel deixa pelo menos 5 mortos no norte da
-                                Cisjordânia</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/09/design-sem-nome-3-1-345x207.png"
-                            class="card-img-top" alt="Imagem do Card 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Kate Middleton anuncia que terminou quimioterapia: ‘Meu caminho para
-                                a cura e para a total recuperação é longo’</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="red-bar"></div> <!-- Barra vermelha -->
-                        <img src="https://jpimg.com.br/uploads/2024/06/000_34wq2ef-311x207.jpg" class="card-img-top"
-                            alt="Imagem do Card 6">
-                        <div class="card-body">
-                            <h5 class="card-title">No Timor Leste, papa Francisco pede ‘responsabilidade’ para prevenir
-                                abusos de menores</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-dark">Leia mais</a>
-                        </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/10/furacao.jpg"
+                        class="card-img-top" alt="Imagem do Card 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Furacão Francine se aproxima da Louisiana e estado de emergência é
+                            declarado nos EUA</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="d-flex justify-content-start align-items-start">
+            <!-- Segunda linha de cards sem margem superior -->
+            <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/9306bf5c2bc59baa03638fcca6b6388604ebdccd-326x207.jpg"
+                        class="card-img-top" alt="Imagem do Card 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Trump culpa Biden e Kamala por incitar atentado contra ele em campo
+                            de golfe</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/07/cob-712x450.png" class="card-img-top"
+                        alt="Imagem do Card 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Governo francês frustra três planos de ataques terroristas durante os
+                            Jogos de Paris-2024</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/incendio-nos-eua-750x450.jpg" class="card-img-top"
+                        alt="Imagem do Card 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Governo da Califórnia declara estado de emergência após incêndios
+                            devastarem a região</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-start align-items-start">
+            <!-- Segunda linha de cards sem margem superior -->
+            <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/000_36gd8ch-676x450.jpg" class="card-img-top"
+                        alt="Imagem do Card 4">
+                    <div class="card-body">
+                        <h5 class="card-title">FBI investiga nova tentativa de assassinato contra Trump após tiros
+                            serem disparados perto do seu clube de golfe</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/aabf0d0c0664f869a204b02185e741629966532b-675x450.jpg"
+                        class="card-img-top" alt="Imagem do Card 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempestade tropical Francine atinge Louisiana e gera preocupações com
+                            inundações</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/000_36g33f9-345x199.jpg" class="card-img-top"
+                        alt="Imagem do Card 6">
+                    <div class="card-body">
+                        <h5 class="card-title">SpaceX faz história com primeira caminhada espacial privada</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-start align-items-start">
+            <!-- Segunda linha de cards sem margem superior -->
+            <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/aysenur-ezgi-eyg-345x207.jpg" class="card-img-top"
+                        alt="Imagem do Card 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Israel diz que pode ter matado ‘acidentalmente’ ativista dos EUA na
+                            Cisjordânia</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2023/09/51887651804_613af6c21f_o-300x170.jpg"
+                        class="card-img-top" alt="Imagem do Card 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Presidente do STF defende na ONU a necessidade do combate de crimes
+                            ambientais no Brasil</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2019/06/european-union-4205972_640.jpg" class="card-img-top"
+                        alt="Imagem do Card 6">
+                    <div class="card-body">
+                        <h5 class="card-title">União Europeia diz que ainda não está pronta para concluir acordo de
+                            associação com Mercosul</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-start align-items-start">
+            <!-- Segunda linha de cards sem margem superior -->
+            <div class="d-flex flex-wrap"> <!-- Flexbox para centralizar os cards -->
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/6c4bfa60234864a3f73c16130d43254e83190d12-310x207.jpg"
+                        class="card-img-top" alt="Imagem do Card 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Ataque aéreo de Israel deixa pelo menos 5 mortos no norte da
+                            Cisjordânia</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/09/design-sem-nome-3-1-345x207.png" class="card-img-top"
+                        alt="Imagem do Card 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Kate Middleton anuncia que terminou quimioterapia: ‘Meu caminho para
+                            a cura e para a total recuperação é longo’</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="red-bar"></div> <!-- Barra vermelha -->
+                    <img src="https://jpimg.com.br/uploads/2024/06/000_34wq2ef-311x207.jpg" class="card-img-top"
+                        alt="Imagem do Card 6">
+                    <div class="card-body">
+                        <h5 class="card-title">No Timor Leste, papa Francisco pede ‘responsabilidade’ para prevenir
+                            abusos de menores</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-dark">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <footer style="background-color: #f8f9fa; padding: 20px 0;"></footer>
